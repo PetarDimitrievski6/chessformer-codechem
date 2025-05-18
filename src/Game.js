@@ -64,6 +64,7 @@ class Game{
             } else {
                 removeValidMoves(board)
                 this.boards = this.selectedPlayer.movePiece(x, y, board, this)
+                this.selectedPlayer = null;
             }
         } else {
             for (let piece of this.pieces) {

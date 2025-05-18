@@ -3,8 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <title>ChessFormer</title>
-    <link crossorigin="anonymous" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css"
-          integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" rel="stylesheet">
     <style>
         body {
             color: #00b871;
@@ -25,6 +23,15 @@
             display: inline-block;
         }
 
+        button {
+            background-color: rgba(114, 129, 151, 0.27);
+            border: none;
+            color: #00b871;
+            padding: 12px 60px;
+        }
+
+
+
     </style>
 </head>
 <body>
@@ -32,12 +39,12 @@
      style="height: 100vh;min-width: 1100px; background: linear-gradient(45deg, #288073, #1d4e4a 3%, #131f24 12%, #131f24 80%, #1d4e4a 94%, #288073) no-repeat fixed;">
     <div>
         <div class="row fw-bold">
-            <div class="col-10">
+            <div class="col-8" style="color: #00b871;">
                 <h1>ChessFormer</h1>
                 <h3>Code Chemistry - Open Day</h3>
             </div>
-            <div class="col-2 d-flex justify-content-end align-items-center">
-                <button onclick="reload_level()" class="btn btn-success">New Game</button>
+            <div class="col-4 d-flex justify-content-end align-items-center">
+                <button onclick="reload_level()">New Game</button>
             </div>
         </div>
         <div class="row" style="position: relative;">
@@ -48,32 +55,15 @@
             </div>
         </div>
         <div class="row-12 d-flex justify-content-center mt-3">
-            <button class="btn btn-success active mx-2" id="btn-lvl-1" onclick="level1()">Level 1</button>
-            <button class="btn btn-success mx-2" id="btn-lvl-2" onclick="level2()">Level 2</button>
-            <button class="btn btn-success mx-2" id="btn-lvl-3" onclick="level3()">Level 3</button>
-            <button class="btn btn-success mx-2" id="btn-lvl-4" onclick="levelBonus()">BONUS</button>
+            <button class="mx-1" id="btn-lvl-1" onclick="level1()">Level 1</button>
+            <button class="mx-1" id="btn-lvl-2" onclick="level2()">Level 2</button>
+            <button class="mx-1" id="btn-lvl-3" onclick="level3()">Level 3</button>
+            <button class="mx-1" id="btn-lvl-4" onclick="levelBonus()">BONUS</button>
         </div>
     </div>
 </div>
 
-<script crossorigin="anonymous"
-        integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO"
-        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"></script>
-<script type="module">
-    import level1 from "./src/lvl1_starter.js";
-    import level2 from "./src/lvl2_starter.js";
-    import level3 from "./src/lvl3_starter.js";
-    import levelBonus from "./src/lvl_bonus_starter.js";
-    import reload_level from "./src/reload_level.js";
+<script type="module" src="./src/main.js"></script>
 
-
-    window.onload = level1;
-    window.level1 = level1;
-    window.level2 = level2;
-    window.level3 = level3;
-    window.levelBonus = levelBonus;
-    window.reload_level = reload_level;
-
-</script>
 </body>
 </html>
